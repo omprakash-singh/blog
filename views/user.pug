@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+     head
+          meta(charset="UTF-8")
+          meta(http-equiv="X-UA-Compatible", content="IE=edge")
+          meta(name="viewport", content="width=device-width, initial-scale=1.0")
+          link(rel="stylesheet", href="bloguser.css")
+          title=username
+     body 
+     .logout_btn 
+          form(action="/logout", method="post") 
+               button(type="submit") logout
+     .user--container
+          .user--contain
+               h1=username
+               h2=useremail
+               form(action="/user", method="post") 
+                    h1 Change Your Email Password
+                    input(type="email" name='email' id="" placeholder="Enter new Email" required)
+                    br
+                    input(input type="password" name="password" id="" placeholder="Enter new password" required)
+                    br
+                    input(type="password" name="confirmPassword" id="" placeholder="Enter confirm password" required)
+                    br
+                    button(class="user---submit--btn" type="submit") change
+          a(href="/")  Home &rightarrow;
+     .container 
+          each d in data 
+               .contain 
+                    form(action=`/${d.id}`, method="post") 
+                         h1=d.name
+                         p=d.post 
+                         h3 Date: 
+                             span=d.date   
+                         button(class='del--btn' type="submit") delete

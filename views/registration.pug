@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+     head
+          meta(charset="UTF-8")
+          meta(http-equiv="X-UA-Compatible", content="IE=edge")
+          meta(name="viewport", content="width=device-width, initial-scale=1.0")
+          title || Sign-up || 
+          link(rel="stylesheet", href="style.css")
+     body 
+       .container 
+           .item
+              h1 SIGN UP
+              form(action="/registration", method="post") 
+                  label(for="name" class='text') Your Username
+                  input(type="text", name="name", placeholder="mysuperusername" class="design" )
+                  label(for="email", class="text") Your email
+                  input(type="email",placeholder="mysuperemail@gmail.com " class="design" name="email")
+                  label(for='password' class='text') Your password
+                  input(type="password" placeholder="eg.X8df90EO" class='design' name="password")
+                  label(for="cpassword" class='text') Please confirm your password
+                  input(type="password" placeholder="eg.X8df90EO" class="design" name="confirmPassword")
+                  button(type="submit" class='btn') SIGN UP
+
+                  hr
+                  p(class='or') OR
+                  p(class='login') Do you have an account? 
+                      a(href="/") Log in 
+                  
+
